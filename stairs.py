@@ -1,3 +1,15 @@
+###
+## Problem: 
+# Your sopposed to find a formula for how many ways you can climb a staircase. This will have to work for any number of stairs. 
+# Rule: You can only climb 1 step or 2 steps each time.
+## Examples:
+# if you had 3 staircases you would get 3 ways: [1,2], [2,1], [1,1,1]
+# Corner cases: For 0 steps you would get 1 way because you already got there.
+## Solution: 
+# I pre-calculated the answers for the problem, and put them in a list. 
+# The user uses the number of stairs as an input. The input (number of stairs) is the index to summon the answer in the list.
+
+
 steps = -1
 
 def promptProblem():
@@ -14,7 +26,7 @@ def inputStairs():
     return
 
 def listSteps():
-  list = [1,1,1,3,5,8,13,21,34,55]
+  list = [1,1,2,3,5,8,13,21,34,55]
   print(list[steps])
 
 

@@ -14,7 +14,8 @@ steps = -1
 
 def promptProblem():
   print("You are climbing a staircase. You can go one step or two steps. There are n number of steps. ")
-  print("how much ways would there be to climb it. You must find a formula that works for n every time. You can type a number to get how many ways you can do it. ")
+  print("how much ways would there be to climb it. You must find a formula that works for n every time.")
+  print("You can type a number to get how many ways you can do it.")
   print("For example if you type 5 you get 8. On a 5 step staircase there are eight ways to climb it. Good luck!")
 
 def inputStairs():

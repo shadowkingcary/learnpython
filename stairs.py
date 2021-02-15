@@ -9,9 +9,6 @@
 # I pre-calculated the answers for the problem, and put them in a list. 
 # The user uses the number of stairs as an input. The input (number of stairs) is the index to summon the answer in the list.
 
-
-steps = -1
-
 def promptProblem():
   print("You are climbing a staircase. You can go one step or two steps. There are n number of steps. ")
   print("how much ways would there be to climb it. You must find a formula that works for n every time.")
@@ -20,23 +17,30 @@ def promptProblem():
 
 def inputStairs():
   #steps
-  global steps 
+  
   steps = int(input('Pick a number for the machine.\n There are 9 choices. (1, 2, 3, 4, 5, 6, 7, 8, or 9, ) \n'''))
   if steps > 9:
     print("I'm sorry, our system does not go that high.")
+    return None
+  else:
+    return steps
+  
+def listSteps(s):
+  # Argument s is the total steps. 
+  # I used s to draw out the index.
+  if s == None:
+    print("You can only pick 0 to 9.")  
     return
-
-def listSteps():
   list = [1,1,2,3,5,8,13,21,34,55]
-  print(list[steps])
+  print("There is " + str(list[s]) + " way/ways to climb the staircase.")
 
 
 
 # what you really do/execute
 def main():
   promptProblem()
-  inputStairs()
-  listSteps()
+  s = inputStairs()
+  listSteps(s)
 
 
 

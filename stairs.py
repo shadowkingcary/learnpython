@@ -32,14 +32,27 @@ def listSteps(s):
   list = [1,1,2,3,5,8,13,21,34,55]
   print("There is " + str(list[s]) + " way/ways to climb the staircase.")
 
-
-
+def calculateWaysFormula(steps):
+  # Argument steps would be the number of steps. 
+  # You can take any number.
+  # It returns the number of ways to climb the staircase. 
+  # If the "steps" is less than 0 then the function will return "None".
+  # This method is called an Up-Down approach. The implementation is simple and easy to understand.
+  # The greater the number the more time it will take. When you start reaching the 40s it takes a few more minutes.
+  if steps < 0:
+    return None 
+  if steps == 0:
+    return 1
+  if steps == 1:
+    return 1
+  return(calculateWaysFormula(steps-1) + calculateWaysFormula(steps-2))
+  
 # what you really do/execute
 def main():
-  promptProblem()
-  s = inputStairs()
-  listSteps(s)
-
+  # promptProblem()
+  # s = inputStairs()
+  # listSteps(s)
+  print(calculateWaysFormula(30))
 
 
 if __name__ == "__main__":

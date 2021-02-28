@@ -16,8 +16,6 @@ def promptProblem():
   print("For example if you type 5 you get 8. On a 5 step staircase there are eight ways to climb it. Good luck!")
 
 def inputStairs():
-  #steps
-  
   steps = int(input('Pick a number for the machine.\n There are 9 choices. (1, 2, 3, 4, 5, 6, 7, 8, or 9, ) \n'''))
   if steps > 9:
     print("I'm sorry, our system does not go that high.")

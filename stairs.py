@@ -8,6 +8,7 @@
 ## Solution: 
 # I pre-calculated the answers for the problem, and put them in a list. 
 # The user uses the number of stairs as an input. The input (number of stairs) is the index to summon the answer in the list.
+import timeit
 
 def promptProblem():
   print("You are climbing a staircase. You can go one step or two steps. There are n number of steps. ")
@@ -46,13 +47,22 @@ def calculateWaysFormula(steps):
   if steps == 1:
     return 1
   return(calculateWaysFormula(steps-1) + calculateWaysFormula(steps-2))
+
+  mem = [0] * 100
+  def ways(steps):
+    global mem
+def memory():
+ if mem == 0
+  print("Nothing in memory")
+ if mem>0
+  print("In storage")
   
 # what you really do/execute
 def main():
   # promptProblem()
   # s = inputStairs()
   # listSteps(s)
-  print(calculateWaysFormula(30))
+  print(timeit.timeit("calculateWaysFormula(1)", setup="from __main__ import calculateWaysFormula", number=100))
 
 
 if __name__ == "__main__":
